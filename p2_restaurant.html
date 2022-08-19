@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Chef's Table, Restaurant Website</title>
+    <meta charset="UTF-8">
+    <meta name="keywords" content="restaurant, food">
+    <meta name="description" content="Restaurant website, chef's table, from local farm to table">
+    <meta name="author" content="WonHee Lee">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;1,700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="p2_cstyle.css">
+</head>
+
+<body> <!-- Apply sementic elements to define different part of web page in HTML --> 
+    <button onclick="topFunction()" id="myBtn"  title="Go to top">&#128285;</button>   
+ 
+    <nav class="navbar fixed-top navbar-expand-md navbar-light">
+      <div class="container">
+        <a class="navbar-brand" href="#" style="font-family:cursive;color: orange;"><b>Chef's Table</b></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item"><a class="nav-link active text-light" aria-current="page" href="#menu">MENU</a></li>
+            <li class="nav-item"><a class="nav-link text-light" href="#order">ORDER</a></li>
+            <li class="nav-item"><a class="nav-link text-light" href="#contact">CONTACT</a></li>
+            <li class="nav-item"><button type="button" class="btn text-light" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo" Style="background-color: orange;">RESERVATION</button></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Reservation</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <form>
+                <div class="mb-3">
+                  <label for="text" class="col-form-label">Reservations may be booked up to 15 days in advance. Please email or call the restaurant if it is within 24 hours or if you have any questions.</label>
+                  <input type="image" src="imageP2/i_modal.png" alt="food image" width="200" height="200" class="form-control" id="image">
+                </div>
+                <div class="mb-3">
+                  <label for="name" class="col-form-label">Name:</label>
+                  <input type="text" class="form-control" id="name">
+                </div>
+                <div class="mb-3">
+                  <label for="email" class="col-form-label">Email:</label>
+                  <input type="email" class="form-control" id="email">
+                </div>
+                <div class="mb-3">
+                  <label for="phome" class="col-form-label">Phone:</label>
+                  <input type="tel" class="form-control" id="phone">
+                </div>
+                <div class="mb-3">
+                  <label for="date" class="col-form-label">Date:</label>
+                  <input type="date" class="form-control" id="date">
+                </div>
+                <div class="mb-3">
+                  <label for="time" class="col-form-label">Time:</label>
+                  <input type="time" class="form-control" id="time">
+                </div>
+                <div class="mb-3">
+                  <label for="number" class="col-form-label">Person:</label>
+                  <input type="number" class="form-control" id="number">
+                </div>
+                <div class="mb-3">
+                  <label for="message-text" class="col-form-label"><i class="bi bi-chat-dots"></i>Message:</label>
+                  <textarea class="form-control" id="message-text"></textarea>
+                </div>
+              </form>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-success">Book Now</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- end of modal -->
+
+    <header id="home" class="mt-5 pt-2"> 
+    <img src="imageP2/i_bg.png" alt="food" width="100%" height="500"> 
+    <div id="brand" class="text-center">
+        <h2><b>Chef's Table</b></h2>
+        <p><b>A local farm to table</b></p>
+        <p>"Patio is open & Delivery is available"</p>
+        <button class="text-center text-white p-2">ORDER NOW</button>
+        </div>
+    </header>
+
+ <!-- Social media icon -->  
+ <div id="link" class="container-fluid m-0">
+    <a href="#"><i class="fa fa-pinterest" aria-hidden="true"></i></a>
+    <a href="#"><i class="fa fa-youtube" aria-hidden="true"></i></a>
+    <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+    <a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+    <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+</div>
+
+ <!-- start main content -->
+ <h1 id="menu" class="text-center p-5">OUR MENUS</h1>
+<div id="content" class="container"></div> 
+<br><br>
+<!-- end of main content -->
+
+<!-- Footer -->
+<footer id="contact" class="container-fluid">
+<div class="row">
+<div class="footer text-light p-5 col-lg-4 col-md-4 col-sm-12">  
+ <h4><i class="fa fa-phone" aria-hidden="true" style="margin-right: 10px;"></i>CONTACT US</h4><br>
+ <p>LOCATION</p><br>
+<p>678-123 Crossroad Wellington Ontario Canada</p><br>
+ <p>Email: info@chefstable.com</p><br>
+ <p>Phone: 234-123-1234</p>
+</div>
+<div class="footer text-light mt-3 p-5 col-lg-4 col-md-4 col-sm-12">
+    <h4>WORKING HOURS</h4>
+    <br>
+    <p>MON ~ FRI:</p>
+    <p>10:00am ~ 10:00pm</p>
+    <br>
+    <p>SAT ~ SUN:</p>
+    <p>9:00am ~ 11:00pm</p>
+</div>
+<div class="footer text-light p-5 col-lg-4 col-md-4 col-sm-12">
+<h4><i class="fa fa-commenting-o" aria-hidden="true" style="margin-right: 10px;"></i>TESTIMONIAL</h4><br>
+<p style="text-decoration: underline;">What people say about our foods?</p><br>
+<p>Great service with good foods in high quality...visitor from waterloo</p><br>
+<p>Served with well cooked steak with fresh vegetable salad from local farm, really delicious...</p><br>
+</div>
+</div><!-- end of footer's row -->
+<hr style="padding: 0; margin: 0; width: 100%;">
+<div class="text-center text-light p-2" style="font-size: 12px;">Created by WONHEE LEE | 2022</div>
+</footer>
+
+<script>
+    // Get the button
+    var mybutton = document.getElementById("myBtn");
+    //when the user scrolls down 20px from the top of the document , show the button
+    window.onscroll = function() {scrollFunction()};
+
+    function scrollFunction() {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            mybutton.style.display = "block";
+        } else {
+            mybutton.style.display = "none";
+        }
+    }
+    // when the user clicks on the button, scroll to the top of the document
+    function topFunction() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+    }
+
+</script>
+<script src="html_jsonp.js"></script>
+<script src="data_jsonp.js"></script>
+
+</body>
+</html>
