@@ -1,0 +1,85 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+body {
+  font-family: 'Noto Serif', serif;
+}
+#myBtn { display: none; position: fixed; bottom: 20px; right: 30px; z-index: 99; 
+  border: none; outline: none; font-size: 1.8em; color:white; cursor: pointer;
+  background-color:orange; box-shadow: 2px 2px 2px gray;
+   border-radius: 50px; padding: 5px;}
+
+/* Start navbar */
+.navbar { background-color:rgba(4, 88, 4); border-bottom: 2px solid #fff; }
+.navbar button { background-color: orange; border: none; }
+.navbar li a:hover {
+   color: orange;
+ }
+
+/* Start header */
+ header img { position: relative; }
+ #brand { position: absolute; left: 35%; z-index: 1; top: 30%; font-weight: bold; color: #fff; text-shadow: 3px 4px 5px #000;}
+ #brand h2 { font-family: cursive; }
+ #brand p { font-size: 1.2em;}
+ header button { width: 150px; font-family: 'Noto Serif', serif; border: none; border-radius: 5px; background-color: rgb(4, 88, 4);  }
+ header button:hover { background-color: orange; }
+
+/* END HEADER */
+
+/* MAIN CONTENT */
+.items img { width: 550px; height: 300px; border-radius: 5px; box-shadow: 2px 2px 3px gray;  }
+#content h2 { font-family: cursive; color:rgb(4, 88, 4); font-weight: bold; text-decoration: underline; }
+#content h2:hover { color: orange; }
+.items button { border: none; width: 250px; border-radius: 5px; background-color: orange; box-shadow: 2px 2px 3px #808080; }
+/* main content */
+
+/* Social media icon */
+#link {
+  background-color:rgb(190, 194, 192);
+    padding: 15px;
+    text-align: center;
+    margin-bottom: 30px;
+    margin-top: 10px;
+}
+#link h3 {
+    color: rgb(4, 88, 4);
+    font-size: 1.5em;
+    font-family: cursive;
+    font-weight: bold;
+}
+#link a { text-shadow: 2px 3px 3px rgb(66, 66, 66); }
+#link i {
+    font-size: 1.5em;
+    color:white;
+    padding: 5px;
+    width: 40px;
+    height: 40px;
+    border-radius: 10px; 
+    background-color: orange;
+}
+#link i:hover {
+    background-color: rgb(4, 88, 4);
+}
+/* footer */
+footer {
+  background-color:rgb(4, 88, 4);
+  overflow: hidden; /* this value for covering entire footer in green color */
+}
+.footer h4 { 
+  font-family: cursive;
+  font-size: 1.5em;
+  text-shadow: 2px 2px 2px rgb(41, 40, 40);
+}
+.footer h4:hover { color: orange; }
+
+/* Start media query */
+@media only screen and (max-width:767px) { 
+  #brand {
+    left: 20%;
+  }
+  #home img { background-image: url('img.jpeg') no-repeat; }
+  #brand p {
+    font-size: 1.0em;
+  }
+}
