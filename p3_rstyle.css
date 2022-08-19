@@ -1,0 +1,95 @@
+* {
+    box-sizing: border-box;      
+}
+body {
+    font-family: 'Cormorant SC', serif;
+    font-family: 'Lora', serif;
+    font-size: 16px;
+}
+#container {
+    width: 80%;  
+    overflow: hidden;
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px solid rgb(47, 114, 92); 
+}/* overflow property only works for block elements with a specified height.*/
+#sidebar {
+    width: 30%;
+    float: left;
+    height: auto;
+    overflow: auto;
+    background-color: rgb(47, 114, 92);
+    color: #ffffff;
+    padding: 35px; /* for padding of sidebar + extra padding 5px to match height of rightside */
+    margin-bottom: 0px; /* requires to make no gap between container and footer */
+}
+#content {
+    float: left;
+    width: 70%;
+    height: auto;
+    background-color: #ffffff;
+    color: #000000;  
+    margin-bottom: 0px; /* requires to make no gap between container and footer */
+}
+
+.row:after {
+    content: "";
+    clear: both;
+    display: table;
+}
+#sidebar img {
+   margin-left: 30px;
+   border-radius: 100px;
+   transform: rotate(30deg);
+}  
+#content .link a { text-decoration: none; color: #fff; } 
+#sidebar .list li { list-style-type: none; }
+#sidebar i {
+    margin-right: 10px;
+    font-size: 20px;
+}
+#sidebar h3 {
+    width: 100%;
+    background-color: gray;
+    color: #ffffff;
+    padding: 5px;
+    text-align: center;
+    border-radius: 10px;
+    margin-bottom: 36px; /* this is for sidebar in green color by adding this value, to match height of rightside content */
+}
+/* end sidebar */
+/* Start right side */
+header {
+    background-color: gray;
+    color: white;
+    padding: 30px;
+    text-align: center;
+}
+header h1 {
+    font-family: Georgia, serif;
+}
+div.column h2 {
+    text-align: center;
+    color:rgb(47, 114, 92);   
+}
+.frontEnd li { font-size: 0.9em; }
+.uxList li { font-size: 0.9em; }
+section {
+  padding: 0px 30px 20px 30px;
+    
+}
+section ul li {
+    padding: 5px;
+}
+section span {
+    background-color:rgb(47, 114, 92);
+    color: #ffffff;  
+    padding: 3px;
+    border-radius: 5px;
+    margin-right: 10px;
+    font-size: 13px;
+}
+hr {
+    color: gray;
+    width: 80%;
+}
